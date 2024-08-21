@@ -8,25 +8,35 @@ namespace Demo01B
 {
     public class Persona
     {
-        public String Nombres { get; set; }
-        public String Apellidos { get; set;}
-        public int Edad { get; set; }
-        public string NombresCompletos { get; private set; }
+        public Persona()
+        {
 
-        public String MayorDeEdad()
+        }
+        public Persona(string nombres, string apellidos)
+        {
+            Nombres = nombres;
+            Apellidos = apellidos;
+        }
+
+        public string Nombres { get; set; }
+        public string Apellidos { get; set; }
+        public int Edad { get; set; }
+
+        public string NombresCompletos { get; set; }
+
+        public string DevolverEstado()
         {
             string mensaje = "Es menor de edad";
             if (Edad > 18)
                 mensaje = "Es mayor de edad";
+
             return mensaje;
         }
 
         public void AsignarNombresCompletos()
         {
             NombresCompletos = Nombres + " " + Apellidos;
+
         }
-
-
-
     }
 }

@@ -28,12 +28,43 @@ namespace Demo01B
             {
                 Nombres = "Derek",
                 Apellidos = "Torrico",
-                Edad = 5
+        
             };
+
+            Estudiante estudiante = new Estudiante
+            {
+                Nombres = "Dave",
+                Apellidos = "Santivañez",
+                Nota = 20
+            };
+
 
             Console.WriteLine(persona.NombresCompletos);
             Console.WriteLine("Hola mundo");
+            
+
+            Triángulo triángulo = new Triángulo
+            {
+                 x1 = 1,
+                 y1 = 1,
+
+                 x2 = 4,
+                 y2 = 1,
+
+                 y3 = 3,
+                 x3 = 5,
+
+            };
+            triángulo.CalcularLados();
+
+            double área = triángulo.CalcularArea();
+            double perímetro = triángulo.CalcularPerimetro();
+
+            Console.WriteLine($"Área: {área}");
+            Console.WriteLine($"Perímetro: {perímetro}");
+
             Console.Read();
+
         }
     }
 }
